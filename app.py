@@ -19,11 +19,39 @@ win1.setBackground(color_rgb(0,0,0))
 img = Image(Point(250,250), "mage.gif")
 img.draw(win1)
 
-txt = Text(Point(250,420), "You have chosen the Mage!")
+txt = Text(Point(250,420), "You have chosen the Mage!\nClick anywhere to continue")
 txt.setTextColor('white')
 txt.draw(win1)
 
 win1.getMouse()
 win1.close()
+
+win = GraphWin("MyWindow", 500, 500)
+
+win.setBackground('grey')
+
+oval = Oval(Point(190, 100), Point(310, 145))
+oval.setOutline('black')
+oval.setFill(color_rgb(92, 75, 51))
+oval.draw(win)
+oval.setWidth(5)
+
+rect = Rectangle(Point(210, 140), Point(290, 210))
+rect.setOutline('black')
+rect.setFill('white')
+rect.draw(win)
+rect.setWidth(5)
+
+cir = Circle(Point(250, 300), 100)
+cir.setOutline('black')
+cir.setFill('red')
+cir.setWidth(5)
+cir.draw(win)
+
+txt = Text(Point(250, 420), "Health Potion (50g)")
+txt.draw(win)
+
+win.getMouse()
+win.close()
 
 
