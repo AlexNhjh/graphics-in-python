@@ -9,22 +9,22 @@ battle and withstand the toughest of blows. The normal man(3), while lacking in 
 abilities, has a unique set of skills and knowledge that may prove valuable in unexpected ways \n'''
 for char in String:
     print(char, end="")
-    time.sleep(.01)
+    time.sleep(.00)
 
-input("1,2,3\n")
+choice = input("1,2,3\n")
+if choice == "1":
+    win1 = GraphWin("Window1",500,500)
+    win1.setBackground(color_rgb(0,0,0))
 
-win1 = GraphWin("Window1",500,500)
-win1.setBackground(color_rgb(0,0,0))
+    img = Image(Point(250,250), "mage.gif")
+    img.draw(win1)
 
-img = Image(Point(250,250), "mage.gif")
-img.draw(win1)
+    txt = Text(Point(250,420), "You have chosen the Mage!\nClick anywhere to continue")
+    txt.setTextColor('white')
+    txt.draw(win1)
 
-txt = Text(Point(250,420), "You have chosen the Mage!\nClick anywhere to continue")
-txt.setTextColor('white')
-txt.draw(win1)
-
-win1.getMouse()
-win1.close()
+    win1.getMouse()
+    win1.close()
 
 win = GraphWin("MyWindow", 500, 500)
 
@@ -53,4 +53,3 @@ txt.draw(win)
 
 win.getMouse()
 win.close()
-
