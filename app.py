@@ -1,15 +1,15 @@
 import time
 from graphics import*
 
-String = "Choose your character to play this dragon fighting, cave-exploring adventure: the mage(1), the \n" \
-         "knight(2),  and generic dude(3)! The mage(1), with their mastery of spells and arcane arts, is a \n"\
-         "powerful force to be reckoned with, able to decimate enemies with a single wave of their hand. The \n"\
-         "knight(2), with their heavy armor and trusty sword, is a formidable warrior, able to charge into \n" \
-         "battle and withstand the toughest of blows. The normal man(3), while lacking in magical or combat \n"\
-         "abilities, has a unique set of skills and knowledge that may prove valuable in unexpected ways \n"
+String = '''Choose your character to play this dragon fighting, cave-exploring adventure: the mage(1), the 
+knight(2),  and generic dude(3)! The mage(1), with their mastery of spells and arcane arts, is a 
+powerful force to be reckoned with, able to decimate enemies with a single wave of their hand. The 
+knight(2), with their heavy armor and trusty sword, is a formidable warrior, able to charge into 
+battle and withstand the toughest of blows. The normal man(3), while lacking in magical or combat 
+abilities, has a unique set of skills and knowledge that may prove valuable in unexpected ways \n'''
 for char in String:
     print(char, end="")
-    time.sleep(.00)
+    time.sleep(.01)
 
 input("1,2,3\n")
 
@@ -53,5 +53,4 @@ txt.draw(win)
 
 win.getMouse()
 win.close()
-
 
