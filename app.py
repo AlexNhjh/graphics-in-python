@@ -9,7 +9,7 @@ battle and withstand the toughest of blows. The normal man(3), while lacking in 
 abilities, has a unique set of skills and knowledge that may prove valuable in unexpected ways \n'''
 for char in String1:
     print(char, end="")
-    time.sleep(.01)
+    time.sleep(.00)
 
 
 
@@ -67,35 +67,46 @@ showing the dreary paths inside the cave, Skull Cavern. And to the far right, a 
 of knight welling to slay any monster whose path may cross his. Will you buy any of the items before you?\n'''
 for char in String2:
     print(char, end="")
-    time.sleep(.01)
+    time.sleep(.00)
 
 shopchoice = input("Yes or No\n")
-if shopchoice == "Yes" or "yes":
-    #messing around with shapes (don't use)
-    win = GraphWin("MyWindow", 500, 500)
 
-    win.setBackground('grey')
+if shopchoice == "Yes" or shopchoice == "yes":
+#messing around with shapes (don't use)
+    win2 = GraphWin("Window2", 500, 500)
+
+    win2.setBackground('grey')
 
     oval = Oval(Point(190, 100), Point(310, 145))
     oval.setOutline('black')
     oval.setFill(color_rgb(92, 75, 51))
-    oval.draw(win)
+    oval.draw(win2)
     oval.setWidth(5)
 
     rect = Rectangle(Point(210, 140), Point(290, 210))
     rect.setOutline('black')
     rect.setFill('white')
-    rect.draw(win)
+    rect.draw(win2)
     rect.setWidth(5)
 
     cir = Circle(Point(250, 300), 100)
     cir.setOutline('black')
     cir.setFill('red')
     cir.setWidth(5)
-    cir.draw(win)
+    cir.draw(win2)
 
     txt = Text(Point(250, 420), "Health Potion (50g)")
-    txt.draw(win)
+    txt.draw(win2)
 
-    win.getMouse()
-    win.close()
+    win2.getMouse()
+    win2.close()
+
+if shopchoice == "No" or shopchoice == "no":
+    win2 = GraphWin("Window2", 500, 500)
+    win2.setBackground('black')
+
+    death = Image(Point(250,250),"death.gif")
+    death.draw(win2)
+
+    win2.getMouse()
+    win2.close()
