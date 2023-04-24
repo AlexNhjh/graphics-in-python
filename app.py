@@ -94,24 +94,24 @@ if shopchoice == "Yes" or shopchoice == "yes":
     donkey_prompt.setTextColor('white')
     donkey_prompt.draw(win2)
 
-    total_gold = Text(Point(300,570),"You Have:" +str(total_gold))
+    total_gold = Text(Point(300,570),"You Have:" +str(total_gold) +"g")
     total_gold.setTextColor('gray')
     total_gold.draw(win2)
 
     shopItem = input("\n1, 2, 3\n")
 
     if shopItem == "1":
-        print("You have purchased a health potion!")
-        win2.getMouse()
-        win2.close()
+        print("You have purchased a health potion! Click to continue")
+
     elif shopItem == "2":
-        print("You have purchased a Map!")
-        win2.getMouse()
-        win2.close()
+        print("You have purchased a Map! Click to continue")
+
     elif shopItem == "3":
-        print("You have purchased a donkey!")
-        win2.getMouse()
-        win2.close()
+        print("You have purchased a donkey! Click to continue")
+
+    win2.getMouse()
+    win2.close()
+
 
 elif shopchoice == "No" or shopchoice == "no":
     win2 = GraphWin("Window2", 550, 550)
@@ -121,4 +121,3 @@ elif shopchoice == "No" or shopchoice == "no":
 
     win2.getMouse()
     win2.close()
-
