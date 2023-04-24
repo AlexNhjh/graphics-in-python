@@ -1,15 +1,14 @@
 import time
 from graphics import*
 
-String1 = '''Choose your character to play this dragon fighting, cave-exploring adventure: the mage(1), the 
-knight(2),  and generic dude(3)! The mage(1), with their mastery of spells and arcane arts, is a 
-powerful force to be reckoned with, able to decimate enemies with a single wave of their hand. The 
-knight(2), with their heavy armor and trusty sword, is a formidable warrior, able to charge into 
-battle and withstand the toughest of blows. The normal man(3), while lacking in magical or combat 
-abilities, has a unique set of skills and knowledge that may prove valuable in unexpected ways \n'''
-for char in String1:
+intro = '''
+Congratulations! The King has selected you to go on a quest to slay a mighty dragon! What class will you choose? 
+(1) Mage
+(2) Knight
+(3) Generic Dude\n\n'''
+for char in intro:
     print(char, end="")
-    time.sleep(.00)
+    time.sleep(.03)
 
 
 
@@ -56,18 +55,10 @@ elif choice == "3":
     win1.close()
 
 
-
-
-
-String2 = '''As you enter the dimly lit shop, a faint aroma of herbs and incense fills the air. Shelves 
-line the walls, crammed with exotic-looking objects of all shapes and sizes. In the center of the room, a large 
-wooden table is covered with a variety of items.You walk over to the table and examine the wares. A small vial 
-filled with a shimmering red liquid catches your eye - a health potion. Beside it, a rolled-up map is spread out, 
-showing the dreary paths inside the cave, Skull Cavern. And to the far right, a fine letter with a seal, a contract
-of knight welling to slay any monster whose path may cross his. Will you buy any of the items before you?\n'''
-for char in String2:
+shop_prompt = '''\nHalt! You can't go empty handed! Before you depart, do you want to visit the shop?\n'''
+for char in shop_prompt:
     print(char, end="")
-    time.sleep(.00)
+    time.sleep(.03)
 
 shopchoice = input("Yes or No\n")
 
@@ -102,7 +93,7 @@ if shopchoice == "Yes" or shopchoice == "yes":
     win2.close()
 
 if shopchoice == "No" or shopchoice == "no":
-    win2 = GraphWin("Window2", 500, 500)
+    win2 = GraphWin("Window2", 550, 550)
     win2.setBackground('black')
 
     death = Image(Point(250,250),"death.gif")
