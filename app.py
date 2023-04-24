@@ -100,7 +100,18 @@ if shopchoice == "Yes" or shopchoice == "yes":
 
     shopItem = input("\n1, 2, 3\n")
 
-
+    if shopItem == "1":
+        print("You have purchased a health potion!")
+        win2.getMouse()
+        win2.close()
+    elif shopItem == "2":
+        print("You have purchased a Map!")
+        win2.getMouse()
+        win2.close()
+    elif shopItem == "3":
+        print("You have purchased a donkey!")
+        win2.getMouse()
+        win2.close()
 
 elif shopchoice == "No" or shopchoice == "no":
     win2 = GraphWin("Window2", 550, 550)
@@ -111,15 +122,3 @@ elif shopchoice == "No" or shopchoice == "no":
     win2.getMouse()
     win2.close()
 
-if shopItem == 1:
-    print("You have purchased a health potion!")
-    win2.getMouse()
-    win2.close()
-if shopItem == 2:
-    print("You have purchased a Map!")
-    win2.getMouse()
-    win2.close()
-if shopItem == 3:
-    print("You have purchased a donkey!")
-    win2.getMouse()
-    win2.close()
