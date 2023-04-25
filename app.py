@@ -71,7 +71,7 @@ if shopchoice == "Yes" or shopchoice == "yes":
 
     shopkeeper = Image(Point(400,150),"shopkeeper.gif")
     shopkeeper.draw(win2)
-    shopkeeper_prompt = Text(Point(150,150),"Welcome Traveller! \nWhat would you like to purchase")
+    shopkeeper_prompt = Text(Point(150,150),"Welcome Traveller! \n\nWhat would you like to purchase \nfor your travels?")
     shopkeeper_prompt.setTextColor('white')
     shopkeeper_prompt.draw(win2)
 
@@ -138,3 +138,45 @@ elif shopchoice == "No" or shopchoice == "no":
 
     win2.getMouse()
     win2.close()
+
+#First Cave
+cave1Window = GraphWin("First Cave",700,500)
+cave1Window.setBackground('black')
+
+cave1Prompt = Text(Point(350,450),"cave text (idk what)")
+cave1Prompt.setTextColor('white')
+cave1Prompt.draw(cave1Window)
+
+cave1Image = Image(Point(350,250),"cave.gif")
+cave1Image.draw(cave1Window)
+
+cave1Window.getMouse()
+cave1Window.close()
+
+#2nd Cave
+cave2Window = GraphWin("2nd Cave",450,450)
+cave2Window.setBackground('black')
+
+cave2Prompt = Text(Point(225,425),"cave text (idk what)")
+cave2Prompt.setTextColor('white')
+cave2Prompt.draw(cave2Window)
+
+cave2Image = Image(Point(225,210),"cave2.gif")
+cave2Image.draw(cave2Window)
+
+cave2Window.getMouse()
+cave2Window.close()
+
+#Dragon
+dragonWindow = GraphWin("Dragon",500,460)
+dragonWindow.setBackground('black')
+
+dragonPrompt = Text(Point(250,425),"oh a dragon das crazy")
+dragonPrompt.setTextColor('white')
+dragonPrompt.draw(dragonWindow)
+
+dragonImage = Image(Point(250,200),"dragon.gif")
+dragonImage.draw(dragonWindow)
+
+dragonWindow.getMouse()
+dragonWindow.close()
