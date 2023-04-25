@@ -63,7 +63,7 @@ for char in shop_prompt:
 shopchoice = input("Yes or No\n")
 
 if shopchoice == "Yes" or shopchoice == "yes":
-    total_gold = 100
+    total_goldAmount = 100
 
 
     win2 = GraphWin("Window2", 600, 600)
@@ -78,36 +78,53 @@ if shopchoice == "Yes" or shopchoice == "yes":
 #Health Potion section
     healthPotion = Image(Point(100,420),"health.gif")
     healthPotion.draw(win2)
-    health_prompt = Text(Point(100, 500), "Health Potion (50g)\nType 1 to Confirm")
+    health_prompt = Text(Point(100, 500), "Health Potion (50g)\nType 1 to Purchase")
     health_prompt.setTextColor('white')
     health_prompt.draw(win2)
 #Map
     map = Image(Point(300,420),"map.gif")
     map.draw(win2)
-    map_prompt = Text(Point(300,500), "Map (100g)\nType 2 to Confirm")
+    map_prompt = Text(Point(300,500), "Map (100g)\nType 2 to Purchase")
     map_prompt.setTextColor('white')
     map_prompt.draw(win2)
 #Donkey
     donkeyimg = Image(Point(500,420),"donkey.gif")
     donkeyimg.draw(win2)
-    donkey_prompt = Text(Point(500,500), "Donkey (100g)\nType 3 to Confirm")
+    donkey_prompt = Text(Point(500,500), "Donkey (100g)\nType 3 to Purchase")
     donkey_prompt.setTextColor('white')
     donkey_prompt.draw(win2)
 
-    total_gold = Text(Point(300,570),"You Have:" +str(total_gold) +"g")
+    total_gold = Text(Point(300,570),"You Have:" +str(total_goldAmount) +"g")
     total_gold.setTextColor('gray')
     total_gold.draw(win2)
 
     shopItem = input("\n1, 2, 3\n")
 
     if shopItem == "1":
-        print("You have purchased a health potion! Click to continue")
+        total_goldAmount = total_goldAmount - 50
+        total_gold.setText("You Have: " + str(total_goldAmount) + "g")
+
+        shop_confirm = Text(Point(300,545),"You Have purchased a Health Potion! Click to continue")
+        shop_confirm.setTextColor('white')
+        shop_confirm.draw(win2)
 
     elif shopItem == "2":
-        print("You have purchased a Map! Click to continue")
+        total_goldAmount = total_goldAmount - 100
+        total_gold.setText("You Have: " + str(total_goldAmount) + "g")
+
+        shop_confirm = Text(Point(300, 545), "You Have purchased a Map! Click to continue")
+        shop_confirm.setTextColor('white')
+        shop_confirm.draw(win2)
 
     elif shopItem == "3":
-        print("You have purchased a donkey! Click to continue")
+        total_goldAmount = total_goldAmount - 100
+        total_gold.setText("You Have: " + str(total_goldAmount) + "g")
+
+        shop_confirm = Text(Point(300, 545), "You Have purchased a Donkey! Click to continue")
+        shop_confirm.setTextColor('white')
+        shop_confirm.draw(win2)
+
+
 
     win2.getMouse()
     win2.close()
